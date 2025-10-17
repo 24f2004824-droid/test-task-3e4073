@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>student-test-task-3e4073</title>
+  </head>
+  <body>
+    <h1 id="title">student-test-task-3e4073</h1>
+    <p id="brief">Test captcha solver</p>
+    
+    <div id="captcha-solver">
+      <div id="captcha-url"></div>
+      <div id="solved" aria-live="polite">(solver placeholder)</div>
+    </div>
+    <script>
+      (function() {
+        try {
+          const params = new URLSearchParams(location.search);
+          const url = params.get('url');
+          if (url) document.getElementById('captcha-url').textContent = url;
+        } catch(e) { console.error(e); }
+      })();
+    </script>
+  </body>
+</html>
